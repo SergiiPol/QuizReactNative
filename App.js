@@ -1,8 +1,9 @@
 import React, { useCallback } from 'react';
-import { StyleSheet, SafeAreaView } from 'react-native';
+import { StyleSheet, SafeAreaView, Text } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import HomePage from './components/HomePage'
 import { useFonts } from 'expo-font';
+import Navigate from './navigate';
 
 export default function App() {
 
@@ -21,17 +22,10 @@ export default function App() {
   }
 
   return (
-      <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
-        <HomePage />
-      </SafeAreaView>
+        <Navigate />
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
 });
